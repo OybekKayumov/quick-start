@@ -1,0 +1,11 @@
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: darkkhaki;
+  color: #fff;
+}
+
+li {
+  background-color: cadetblue;
+  padding: 10px;
+  margin-bottom: 10px;
+}
