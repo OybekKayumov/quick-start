@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/react.js"></script>
+  <script src="js/react-dom.js"></script>
+</head>
+<body>
+  <div id="content"></div>
+  <div id="list"></div>
+  <div id="shopping"></div>
+  <div id="shopping1"></div>
+  
+
+  <script type="text/javascript">
+    
+      const title = React.createElement('p', null, "Module 3 React")
+      ReactDOM.render(
+        title,
+        document.getElementById('content')
+      )
+      
+      // and without variable
+      ReactDOM.render(
+        React.createElement('li', null, 'List'),
+        document.querySelector('#list')
+      )
+//  practice
+      // class ShoppingList extends React.Component {
+      //   render() {
+      //     return (
+      //       <div className="shopping-list">
+      //         <h1>Shopping List for {this.props.name}</h1>
+      //         <ul>
+      //           <li>Instagram</li>
+      //           <li>WhatsApp</li>
+      //           <li>Oculus</li>
+      //           <li>Telegram</li>
+      //         </ul>
+      //       </div>
+      //     );
+      //   }
+      // }
+
+
+  ReactDOM.render(
+    // React.createElement('h1', null , "OK"),
+    React.createElement('h1', null, 'Shopping List for'),
+    // document.querySelector('#shopping'),
+    document.querySelector('#shopping1'),
+    
+    );
+
+  </script>
+</body>
+</html>
