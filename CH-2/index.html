@@ -10,6 +10,7 @@
 </head>
 <body>
   <div id="content"></div>
+  <div id="content-chapter"></div>
   
 
   <script type="text/javascript">
@@ -19,7 +20,51 @@
       document.getElementById('content')
     )
     
+    // создание и прорисовка класса
+    let h2 = React.createElement('h2', null, 'Chapter 2')
+    class Chapter extends React.Component {
+      render() {
+        return React.createElement('div', null, h2, h2)
+      }
+    }
+    ReactDOM.render(
+        React.createElement(Chapter, null),
+        document.getElementById('content-chapter')
+    )
 
+    // 1
+    // class Chapter extends React.Component {
+      // определяет КЛАСС компонета React c именем, НАЧИНАЮЩИМСЯ С СИМВОЛА ВЕРХНЕГО РЕГИСТРА
+
+    // 2
+    // render() {
+      // создает метод render() в виде выражения (функция, возвращающая один элемент)
+
+    // 3
+    // ReactDOM.render(
+    // присоединяет элемент React к реальному элементу DOM с идентификатором <content>
+
+    // 4
+    // return React.createElement('div', null, h2, h2)
+    // реализует команду return м одним элементом React, чтобы класс React мог вызвать render() и получить элемент <div> с двумя элементами h2
+
+    // 5
+    // React.createElement(Chapter, null),
+    // использует класс Chapter для создания элемента, при этом в первом аргументе передается объект вместо строки
+
+    ReactDOM.render(
+      React.createElement(
+        'span',
+        null,
+        React.createElement(Chapter),
+        React.createElement(Chapter),
+        React.createElement(Chapter),
+      ),
+      document.getElementById('content-chapter')
+    )
+  // пример многократного испjльзования компонента: упаковывается в контейнер div по 2 
+  // Компонент ускоряет разработку и сокращает количество ошибок. Компоненты также имеют события жизненного цикла, события DOM и другие возможности.
+  
   </script>
 </body>
 </html>
