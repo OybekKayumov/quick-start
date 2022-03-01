@@ -31,3 +31,48 @@
 //  Снижение нагрузки на пальцы и количества синтаксических ошибок — разработчикам приходится набирать меньше кода, а это означает, что они сделают
 // меньше ошибок и им придется выполнять меньше монотонной работы.
 
+
+// this code 
+<div>
+  <HelloWorld />
+  <br/>
+  <a href="http://webapplog.com">Great JS Recources</a>
+</div>
+
+// same as this:
+
+React.createElement(
+  'div',
+  null,
+  React.createElement(HelloWorld, null),
+  React.createElement("br", null),
+  React.createElement(
+    "a",
+    { href="http://webapplog.com" },
+    "Great JS Recources"
+    )
+)
+
+// если вы воспользуетесь Babel, код JS принимает следующий вид:
+
+'use srict';
+
+React.createElement(
+  'div',
+  null,
+  " ",
+  React.createElement(HelloWorld, null),
+  " ",
+  React.createElement("br", null),
+  " ",
+  React.createElement(
+    "a",
+    { href="http://webapplog.com" },
+    "Great JS Recources"  
+  ),
+  " "
+);
+
+// Фактически JSX представляет собой мини-язык с XML-подобным синтаксисом;
+// однако этот язык изменил подход к написанию UI-компонентов.
+// Ранее разработчики писали разметку HTML — и код JS для контроллеров и представлений — в MVCподобном стиле, переключаясь между файлами. Такой подход был обусловлен разделением обязанностей на ранней стадии развития технологий. Он хорошо работал, пока веб-страницы состояли из статической разметки HTML, небольшого количества CSS и фрагмента JS
