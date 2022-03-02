@@ -1,29 +1,28 @@
+import AnalogDisplay from "/CH-4/js/analog-display.js";
 class Clock extends React.Component {
   constructor(props) {
-    super(props)
-    this.LaunchClock();
+    super(props);
+    this.launchClock();
     this.state = {
-      currTime: new Date().toLocaleString()
-    }
+      currentTime: new Date().toLocaleString()
+    };
   }
-
-  LaunchClock() {
+  launchClock() {
     setInterval(() => {
-      console.log('Updating time...');
-      this.setState({
-        currTime: new Date().toLocaleString()
-      });
-    }, 1000)
+      console.log('Updating...');
+      this.setState({ currentTime: new Date().toLocaleString() });
+    }, 1000);
   }
-  
   render() {
-    console.log('Rendering Clock ...');
+    console.log('Rendering...');
     return React.createElement(
       'div',
       null,
-      this.state.currTime
-    ); 
+      React.createElement(AnalogDisplay, { time: this.state.currentTime })
+      );
+    }
   }
-}
-
-export default Clock
+  
+  export default Clock
+  
+  // React.createElement(DigitalDisplay, { time: this.state.currentTime })
