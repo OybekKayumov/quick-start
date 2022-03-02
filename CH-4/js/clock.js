@@ -1,4 +1,5 @@
 import AnalogDisplay from "/CH-4/js/analog-display.js";
+import DigitalDisplay from "/CH-4/js/digital-display.js";
 class Clock extends React.Component {
   constructor(props) {
     super(props);
@@ -18,11 +19,11 @@ class Clock extends React.Component {
     return React.createElement(
       'div',
       null,
-      React.createElement(AnalogDisplay, { time: this.state.currentTime })
+      React.createElement(AnalogDisplay, { time: this.state.currentTime }),
+      React.createElement(DigitalDisplay, { time: this.state.currentTime })
       );
     }
   }
   
   export default Clock
   
-  // React.createElement(DigitalDisplay, { time: this.state.currentTime })
