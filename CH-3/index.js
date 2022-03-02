@@ -33,46 +33,54 @@
 
 
 // this code 
-<div>
+{/* <div>
   <HelloWorld />
   <br/>
   <a href="http://webapplog.com">Great JS Recources</a>
-</div>
+</div> */}
 
 // same as this:
 
-React.createElement(
-  'div',
-  null,
-  React.createElement(HelloWorld, null),
-  React.createElement("br", null),
-  React.createElement(
-    "a",
-    { href="http://webapplog.com" },
-    "Great JS Recources"
-    )
-)
+// React.createElement(
+//   'div',
+//   null,
+//   React.createElement(HelloWorld, null),
+//   React.createElement("br", null),
+//   React.createElement(
+//     "a",
+//     { href="http://webapplog.com" },
+//     "Great JS Recources"
+//     )
+// )
 
 // если вы воспользуетесь Babel, код JS принимает следующий вид:
 
-'use srict';
+// 'use srict';
 
-React.createElement(
-  'div',
-  null,
-  " ",
-  React.createElement(HelloWorld, null),
-  " ",
-  React.createElement("br", null),
-  " ",
-  React.createElement(
-    "a",
-    { href="http://webapplog.com" },
-    "Great JS Recources"  
-  ),
-  " "
-);
+// React.createElement(
+//   'div',
+//   null,
+//   " ",
+//   React.createElement(HelloWorld, null),
+//   " ",
+//   React.createElement("br", null),
+//   " ",
+//   React.createElement(
+//     "a",
+//     { href="http://webapplog.com" },
+//     "Great JS Recources"  
+//   ),
+//   " "
+// );
 
 // Фактически JSX представляет собой мини-язык с XML-подобным синтаксисом;
 // однако этот язык изменил подход к написанию UI-компонентов.
 // Ранее разработчики писали разметку HTML — и код JS для контроллеров и представлений — в MVCподобном стиле, переключаясь между файлами. Такой подход был обусловлен разделением обязанностей на ранней стадии развития технологий. Он хорошо работал, пока веб-страницы состояли из статической разметки HTML, небольшого количества CSS и фрагмента JS
+
+// В наши дни строятся высокоинтерактивные пользовательские
+// интерфейсы, а JS и HTML тесно связаны друг с другом для реализации различных
+// аспектов функциональности.
+// React исправляет нарушенный принцип разделения обязанностей (SoC), объединяя описание пользовательского интерфейса и логики JS; с JSX же код походит на HTML, он проще читается и пишется. Только по одной этой причине можно использовть React и JSX ради нового подхода к написанию
+// пользовательских интерфейсов
+
+// alert('1')

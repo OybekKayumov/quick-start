@@ -7,6 +7,12 @@ test.md
 /.pnp
 .pnp.js
 
+# vscode 
+.vscode
+
+# babel-jsx-test
+babel-jsx-test
+
 # testing
 /coverage
 
